@@ -1,0 +1,15 @@
+{
+  "marketing_spam": "(?i)(newsletter|offer|promotion|webinar|event|summit)",
+  
+  "seo_spam": "(?i)(guest post|link building|seo|backlink|domain authority)",
+  
+  "lead_selling": "(?i)(attendees?|visitors?|contact|lead)\\s?(list|database)",
+  
+  "phishing_keywords": "(?i)(urgent|verify|account|password|reset|blocked|payment|refund)",
+  
+  "phishing_body": "(?i)(click here|verify your account|reset password|provide details)",
+  
+  "suspicious_domains": "(?i)@(qq\\.com|163\\.com|126\\.com|.*\\.top|.*\\.shop|.*\\.club)",
+  
+  "low_quality_subject": "(?i)^(re|fw|rfq\\.?|hi|hello)?$"
+}
