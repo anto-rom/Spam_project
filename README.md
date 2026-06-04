@@ -53,7 +53,6 @@ These can be integrated into:
 
 ## Future Improvements
 
-- ML-based classification
 - Language detection
 - Behavioral sender scoring
 - Real-time campaign detection
