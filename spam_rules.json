@@ -1,0 +1,47 @@
+{
+  "rules": [
+    {
+      "name": "HIGH_CONFIDENCE_SPAM",
+      "priority": 1,
+      "conditions": {
+        "any": [
+          { "pattern_ref": "marketing_spam" },
+          { "pattern_ref": "seo_spam" },
+          { "pattern_ref": "lead_selling" }
+        ]
+      },
+      "action": "AUTO_CLOSE"
+    },
+
+    {
+      "name": "PHISHING",
+      "priority": 0,
+      "conditions": {
+        "any": [
+          { "pattern_ref": "phishing_keywords" },
+          { "pattern_ref": "phishing_body" }
+        ]
+      },
+      "action": "BLOCK"
+    },
+
+    {
+      "name": "SUSPICIOUS_DOMAIN",
+      "priority": 2,
+      "conditions": {
+        "field": "email_domain",
+        "pattern_ref": "suspicious_domains"
+      },
+      "action": "AUTO_CLOSE"
+    },
+
+    {
+      "name": "LOW_QUALITY",
+      "priority": 3,
+      "conditions": {
+        "pattern_ref": "low_quality_subject"
+      },
+      "action": "REVIEW"
+    }
+  ]
+}
